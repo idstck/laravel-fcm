@@ -1,6 +1,6 @@
-# Laravel FCM
+# Simple Laravel FCM
 
-A Simple package that help you send a firebase notification with your laravel applications
+Simple package for using FCM as Push Notification. With multiple token or device ID and send with topics.
 
 ### Installation
 
@@ -10,28 +10,25 @@ You can pull the package via composer :
 $ composer require idstack/laravel-fcm
 ```
 
- Next, You must register the service provider :
+ Register the service provider :
 
  ``` php
-// config/app.php
-
 'Providers' => [
     ...
     Idstack\Fcm\FcmServiceProvider::class,
 ]
  ```
 
- If you want to make use of the facade you must install it as well:
+ Optional using facade:
 
 ```php
-// config/app.php
 'aliases' => [
     ...
     'Fcm' => Idstack\Fcm\Facades\Fcm::class,
 ];
 ```
 
-Next, You must publish the config file to define your fcm server key :
+Publish the config file to define your server key :
 
 ```bash
 php artisan vendor:publish --provider="Idstack\Fcm\FcmServiceProvider"
@@ -52,7 +49,7 @@ return [
 
 ### Usage
 
-If You want to send a FCM with just notification parameter, this is an example of usage sending a FCM with only data parameter :
+This sample usage for sending notification with several information like title and body notification :
 ```php
 fcm()
     ->data([
