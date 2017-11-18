@@ -1,0 +1,24 @@
+{
+    "name": "idstack/laravel-fcm",
+    "description": "Package to send Firebase notification cross Laravel Application",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hakim SM",
+            "email": "hakimsembiring@outlook.co.id"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Idstack\\Fcm\\": "src/"
+        },
+        "files": [
+            "src/Idstack/Fcm/functions.php"
+        ]
+    },
+    "minimum-stability": "stable"
+}
