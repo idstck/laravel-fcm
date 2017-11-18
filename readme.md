@@ -49,7 +49,7 @@ return [
 
 ### Usage
 
-This sample usage for sending notification with several information like title and body notification :
+This sample usage for sending notification to any devices with several information like title and body notification :
 ```php
 fcm()
     ->data([
@@ -57,4 +57,14 @@ fcm()
         'body' => 'This is a test of FCM',
     ])
     ->to($recipients); // $recipients must an array
+```
+
+This sample usage for sending notification using topics with several information like title and body notification :
+```php
+fcm()
+    ->data([
+        'title' => 'Test FCM',
+        'body' => 'This is a test of FCM',
+    ])
+    ->toTopics($recipients); // $recipients must an array
 ```
